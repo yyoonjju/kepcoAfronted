@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/board.css"/>
+  <title>Blog</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="/image/logo.png" width="225px" height="75px">
+        </div>
+        <div th:if="${session.member==null}">
+            <span class="header-span"><a href="/register">회원가입</a></span>
+            <span class="header-span"><a href="/login">로그인</a></span>
+        </div>
+        <div th:unless="${session.member==null}">
+            <span class="header-span" th:text="${session.member.memberId}"></span>
+            <form action="/logout" id="logout" class="header-span" style="display: inline;"><button type="submit">로그아웃</button></form>
+        </div>
+    </header>
+
+    <div class="write-body">
+      <div class="write-button">
+          <form action="/write">
+              <button class="board-btn" type="submit">글 작성하기</button>
+          </form>
+      </div>
+
+        <table class="table-list">
+            <tr class="tr-1">
+                <th>번호</th>
+                <th>제목</th>
+                <th>아이디</th>
+                <th>날짜</th>
+            </tr>
+            <tr th:each="i : ${boardList}">
+                <td th:text="${i.boardSeq}"></td>
+                <td>
+                    <a th:href="@{/content(boardSeq=${i.boardSeq})}">
+                        <input type="hidden" name="boardSeq" th:value="${i.boardSeq}">
+                        <button class="input-submit" type="submit" th:value="${i.title}">[[${i.title}]]</button>
+                    </a>
+                </td>
+                <td th:text="${i.boardId}"></td>
+                <td th:text="${i.writedate}"></td>
+            </tr>
+        </table>
+    </div>
+
+  <div class="paging">
+      <th:block th:each="pageNumber : ${#numbers.sequence(startPage, endPage)}">
+          <a th:href="@{/board(page=${pageNumber})}" th:text="${pageNumber}"></a>
+      </th:block>
+
+  <footer>
+    <div class="foot">Copyright ⓒ2023 게시판명.All right reserved.</div>
+  </footer>
+</body>
+</html>

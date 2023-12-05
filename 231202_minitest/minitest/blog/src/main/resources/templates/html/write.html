@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/write.css"/>
+    <title>Write Page</title>
+</head>
+<body>
+    <div class="write-content">
+        <div class="write-top"> 글 작성하기</div>
+        <div>
+        <form class="write-form" action="/write" method="post" enctype="multipart/form-data">
+            <span class="span-title">제목 </span> <input class="top-input" type="text" name="title"><br> 
+            <span class="span-title">날짜 </span> <input class="top-input" type="text" name="writedate" th:value="${session.nowDateTime}"><br>
+            <span class="span-title">내용 </span> <textarea class="top-textarea" name="contents"></textarea><br>
+
+            <span class="span-title">파일 첨부 </span><br>
+            <input class="file" type="file" name="file">
+
+            <div class="total-btn">
+                <button class="board-btn" type="submit">작성 완료</button>
+                <input type="button" class="board-btn" onclick="location.href='/board'" value="목록보기">
+            </div>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+body {
+    margin: 0; /* 전체 페이지의 margin을 0으로 설정 */
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 63px;
+}
+
+header img { /* 이미지를 왼쪽으로 정렬 */
+    order: -1;
+}
+
+.header-span {
+    margin: 0px 12px 0px 0px;
+    border-bottom: 3px solid #8080803b;
+    border-radius: 8px;
+    padding: 10px 19px 10px 21px;
+    color: #808080a1;
+    font-size: 13px;
+    letter-spacing: 1px;
+    background: #275e0d05;
+}
+
+header button {
+    all:unset;
+}
+
+.header-span a {
+    text-decoration: none;
+    color: #808080a1;
+}
+
+.header-span a:visited {
+    color: #808080a1;
+}
+
+.header-span:hover, .board-btn:hover{
+    cursor: pointer;
+    font-weight: 600;
+    color: #656a65a6;
+}
+
+.write-body {
+    margin: 60px;
+    left: 300px;
+}
+
+.write-button {
+    width: 26%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+}
+
+.board-btn {
+    background: #e6dfda1c;
+    width: 108px;
+    height: 40px;
+    border-radius: 15px;
+    border: 1px solid #8080809c;
+    color: #484040;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+
+.table-list {
+    font-size: 14px;
+    width: 65%; 
+    margin: 0 auto; /* 가운데 정렬을 위한 방법 */
+    border-collapse: collapse; /*테이블 요소의 테두리(보더) : 테이블의 셀 보더를 합쳐서 표시*/
+    border-top: 2px solid rgb(200, 200, 200);
+	border-bottom: 2px solid rgb(200, 200, 200);
+}
+
+.table-list tr:not(.tr-1):hover {
+	background-color: rgb(243 243 243 / 68%);
+}
+
+.table-list th {
+    padding: 18px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-bottom: 2px solid rgb(200 200 200);
+    letter-spacing: 1px;
+}
+
+.table-list a {
+	text-decoration: none;
+	color: #312c2c;
+	cursor: pointer;
+}
+
+td {
+    padding: 16px;
+    text-align: center;
+    color: #312c2c;
+}
+
+tr {
+    border-bottom: 1px solid #8080801f;
+}
+
+.paging {
+    text-align: center;
+    margin: -20px 0px 30px 0px;
+}
+
+.paging a {
+    text-decoration: none;
+    margin-right: 15px;
+    color: black;
+    font-size: 16px;
+}
+
+.paging a:hover {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.foot{
+    margin: 145px 0px 84px 0px;
+    padding-top: 80px;
+    border-top: 1px solid #80808036;
+    font-size: 13px;
+    color: #80808091;
+}
+
+.input-submit {
+    all:unset;
+}

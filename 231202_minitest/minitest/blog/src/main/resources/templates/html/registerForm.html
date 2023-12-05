@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/registerForm.css"/>
+  <title>register.html</title>
+</head>   
+<body>
+	<div class="mypage-container">
+	<form action="/register" method="post" id="myForm"> 
+
+			<h1 style="margin: 0; color: #333; font-size: 30px; padding-bottom:60px;">회원 가입</h1>
+	
+			<div class="div-table-top" style="width: 100%;">
+				<table class="top-table">
+				<tbody>
+					<tr>
+						<td class="tr-left"> 아이디 </td>
+						<td class="tr-right"> 			
+							<input type="text" name="memberId" id="id" >
+
+						</td>
+					</tr>
+					
+					</tr><tr>
+						<td class="tr-left">비밀번호</td>
+						<td class="tr-right">
+							<input type="password" name="memberPw" id="password">
+						</td>
+					</tr>
+					<tr>
+						<td class="tr-left">이름</td>
+						<td class="tr-right">
+							<input type="text" name="memberName" id="username">
+						</td>
+					</tr>
+					
+				</tbody>
+				</table>
+			</div>
+
+			<div class="mypage-footer">
+				<input type="submit" value="회원가입" class="footer-btn">
+				<input type="reset" value="내용 지우기" class="footer-btn">
+                <input type="button" value="이전" class="footer-btn" onClick="history.back()"> 
+			</div>
+	</form>
+	</div>
+</body>	
+</html>

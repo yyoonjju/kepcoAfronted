@@ -1,0 +1,7 @@
+<form action="updatereply" method="post">
+    <input type="hidden" name="replySeq" th:value="${response.replySeq}">
+    <input type="hidden" name="replyId" th:value="${response.replyId}">
+    <input type="hidden" name="boardSeq" th:value="${response.boardSeq}">
+    <input name="replyContents" th:value="${response.replyContents}">
+    <input type="submit" value="완료">
+</form>

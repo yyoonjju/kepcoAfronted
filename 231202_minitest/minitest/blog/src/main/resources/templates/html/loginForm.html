@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/loginForm.css"/>
+  <title>loginForm.html</title>
+</head>
+
+<div style="width:300px;">
+	<form action="/login" method="post"> <!--HtmlController에 @PostMapping("/login")로 데이터 전송-->
+	    <div class="logoDiv"><img src="/image/logo.png" width="225px" height="75px"></div>
+
+	    <div class="fieldset">
+	        <fieldset>
+	            <div class="input">
+	                <div class="input_text">
+	                    <input type="text" name="memberId" placeholder="아이디" style="text-align: center"><br>
+	                    <input type="password" name="memberPw" placeholder="비밀번호" style="text-align: center"><br>
+	                </div>
+	
+	                <div class="input_btn">
+	                    <button type="submit" class="login_btn">로그인</button><br>
+	                </div>
+	            </div>
+	        </fieldset>
+	    </div>
+	</form>
+</div>
